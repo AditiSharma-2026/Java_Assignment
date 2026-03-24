@@ -1,0 +1,40 @@
+// Base class
+class Shape {
+    void display() {
+        System.out.println("This is a shape");
+    }
+}
+
+// Subclass 1
+class Circle extends Shape {
+    double radius = 5;
+
+    void area() {
+        double result = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + result);
+    }
+}
+
+// Subclass 2
+class Rectangle extends Shape {
+    double length = 4;
+    double width = 6;
+
+    void area() {
+        double result = length * width;
+        System.out.println("Area of Rectangle: " + result);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        c.display();
+        c.area();
+
+        Rectangle r = new Rectangle();
+        r.display();
+        r.area();
+    }
+}
